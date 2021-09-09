@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-dark: #54cccc;
+  --clr-white: #ffffff;
+}
+html {
+  font-size: 16px;
+}
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: var(--clr-dark);
+  color: var(--clr-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3rem;
+}
+.container {
+  margin: 0.5rem 0;
+  background-color: blueviolet;
+  padding: 1rem 4rem;
+  border-radius: 0.5rem;
+}
+label {
+  font-size: 1.5rem;
+}
+#Movie-list {
+  border-radius: 0.4rem;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.2rem 0.5rem;
+  margin-left: 1rem;
+  text-align: center;
+}
+#Movie-list option {
+  align-items: center;
+}
+.shows {
+  display: flex;
+  list-style: none;
+  background-color: rgba(25, 25, 25, 0.2);
+  padding: 0.2rem 2rem;
+  border-radius: 2rem;
+  font-weight: 700;
+}
+.shows li {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  justify-content: center;
+  padding: 0.5rem;
+}
+.shows li small {
+  margin-left: -0.5;
+}
+.seats.selected {
+  background-color: greenyellow;
+}
+.seats.booked {
+  background-color: yellow;
+}
+.seats {
+  height: 1.2rem;
+  width: 1.5rem;
+  background-color: var(--clr-white);
+  margin: 0.5rem;
+  border-top-left-radius: 0.7rem;
+  border-top-right-radius: 0.7rem;
+}
+.seat-row {
+  display: flex;
+  width: 100%;
+}
+.screen-container {
+  perspective: 1000px;
+}
+.screen {
+  background-color: whitesmoke;
+  margin-right: -3rem;
+  height: 8rem;
+  width: 100%;
+  transform: rotateX(-50deg);
+  box-shadow: 0 3px 10px (rgba(255, 255, 255, 0.7));
+}
+.seats:nth-of-type(3) {
+  margin-left: 1.5rem;
+}
+.seats:nth-last-of-type(2) {
+  margin-left: 1.5rem;
+}
+.seats:not(.booked):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+.shows .seats:not(.booked):hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+/* @media (min-width: 550px) {
+  h1 {
+    align-items: center;
+  }
+} */
