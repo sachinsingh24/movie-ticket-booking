@@ -1,18 +1,21 @@
+/** @format */
+
 'use strict';
 
 // variables
+const movieSelected = document.getElementById('Movie-list');
+let movieName = movieSelected.value;
 
 const seatsContainer = document.getElementById('screen-container');
 const seats = document.querySelectorAll('.seat-row .seats:not(.booked)');
 const All_Seats = document.querySelectorAll('.seat-row .seats');
-const movieSelected = document.getElementById('Movie-list');
-const amount = document.getElementById('count');
+let amount = document.getElementById('count');
 let TotalPrice = document.getElementById('total');
-//const selectedseats = document.querySelectorAll('.seat-row .seats.selected');
-let movieName = movieSelected.value;
+let selectedseats = document.querySelectorAll('.seat-row .seats.selected');
 let seatPrice = [];
 
 // functions
+
 const PriceValue = () => {
   const selectedseats = document.querySelectorAll('.seat-row .seats.selected');
   const seatsindex = [...selectedseats].map((seat) => {
@@ -51,8 +54,7 @@ const populateUI = () => {
     movieSelected.selectedIndex = selectedMovieIndex;
   }
 };
-populateUI();
-
+// populateUI();
 const updateSelectedCount = () => {
   const selectedseats = document.querySelectorAll('.seat-row .seats.selected');
   const seatsindex = [...selectedseats].map((seat) => {
@@ -71,7 +73,6 @@ const setMovieData = (MovieIndex, MoviePrice, SumPrice) => {
 // Event Listener
 movieSelected.addEventListener('change', (e) => {
   movieName = e.target.value;
-  // #some code have to write if change of movie selection
   updateSelectedCount();
   PriceValue();
 });
@@ -81,12 +82,27 @@ seatsContainer.addEventListener('click', (e) => {
     e.target.classList.contains('seats') &&
     !e.target.classList.contains('booked')
   ) {
-    e.target.classList.toggle('selected');
-    updateSelectedCount();
-    PriceValue();
+    if (movieName == 'Choices') {
+      document.getElementById('message').innerHTML =
+        'Please Select Listed Movie';
+    } else {
+      e.target.classList.toggle('selected');
+      updateSelectedCount();
+      PriceValue();
+      document.getElementById(
+        'message'
+      ).innerHTML = `You have selected <span>${amount.innerHTML}</span> seats for a price of
+        <span>${TotalPrice.innerHTML}</span>`;
+    }
   }
 });
 
 // initial settings
+// message();
 populateUI();
 updateSelectedCount();
+// if (movieName == 'Choices') {
+//   const ac = document.getElementsByClassName('.message');
+//   console.log(ac.innerText);
+// } else {
+// }

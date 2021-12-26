@@ -22,17 +22,17 @@
         <label for="movie">Select Movie</label>
         <select name="Movie-list" id="Movie-list">
           <option selected="true" disabled="disabled">Choices</option>
-          <option>Avenger</option>
-          <option>Golmaal</option>
-          <option>Dabaang</option>
-          <option>Hangama</option>
-          <option>Hera Pheri</option>
-          <option>3 Idiots</option>
-          <option>Dangal</option>
-          <option>The Mask</option>
-          <option>Robot 2.0</option=>
-          <option>Bahubali</option>
-          <option>Avatar</option>
+          <option value="Avenger">Avenger</option>
+          <option value="Golmaal">Golmaal</option>
+          <option value="Dabaang">Dabaang</option>
+          <option value="Hangama">Hangama</option>
+          <option value="Hera-Pheri">Hera Pheri</option>
+          <option value="3-Idiots">3 Idiots</option>
+          <option value="Dangal">Dangal</option>
+          <option value="The-Mask">The Mask</option>
+          <option value="Robot-2.0">Robot 2.0</option=>
+          <option value="Bahubali">Bahubali</option>
+          <option value="Avatar">Avatar</option>
         </select>
       </div>
       <ul class="shows">       
@@ -65,7 +65,7 @@
               <div class="seats">A1</div>
               <div class="seats">A2</div>
               <div class="seats">A3</div>
-              <div class="seats">A4</div>
+              <div class="seats booked">A4</div>
               <div class="seats">A5</div>
               <div class="seats">A6</div>
               <div class="seats">A7</div>
@@ -88,7 +88,7 @@
               <div class="seats">C2</div>
               <div class="seats">C3</div>
               <div class="seats">C4</div>
-              <div class="seats">C5</div>
+              <div class="seats booked">C5</div>
               <div class="seats">C6</div>
               <div class="seats">C7</div>
               <div class="seats">C8</div>
@@ -98,7 +98,7 @@
               <div class="seats">D1</div>
               <div class="seats">D2</div>
               <div class="seats">D3</div>
-              <div class="seats">D4</div>
+              <div class="seats booked">D4</div>
               <div class="seats">D5</div>
               <div class="seats">D6</div>
               <div class="seats">D7</div>
@@ -118,7 +118,7 @@
             </div>
             <div class="seat-row">
               <div class="seats">F1</div>
-              <div class="seats">F2</div>
+              <div class="seats booked">F2</div>
               <div class="seats">F3</div>
               <div class="seats">F4</div>
               <div class="seats">F5</div>
@@ -130,7 +130,7 @@
             <div class="seat-row">
               <div class="seats">G1</div>
               <div class="seats">G2</div>
-              <div class="seats">G3</div>
+              <div class="seats booked">G3</div>
               <div class="seats">G4</div>
               <div class="seats">G5</div>
               <div class="seats">G6</div>
@@ -142,7 +142,7 @@
           </div>
         </div>
 
-      <p class="message">
+      <p class="message" id="message" >
         You have selected <span id="count">0</span> seats for a price of
         <span id="total">0</span>
       </p>

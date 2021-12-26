@@ -9,16 +9,19 @@
 }
 
 :root {
-  --clr-dark: #54cccc;
+  --clr-dark: #083333;
   --clr-white: #ffffff;
 }
+
 html {
   font-size: 16px;
 }
+
 body {
   font-family: 'Source Sans Pro', sans-serif;
   background-color: var(--clr-dark);
 }
+
 .fluid-container {
   color: var(--clr-white);
   display: flex;
@@ -30,15 +33,18 @@ body {
 h1 {
   font-size: 3rem;
 }
+
 .container {
   margin: 0.5rem 0;
   background-color: blueviolet;
   padding: 1rem 4rem;
   border-radius: 0.5rem;
 }
+
 label {
   font-size: 1.5rem;
 }
+
 #Movie-list {
   border-radius: 0.4rem;
   border: none;
@@ -47,17 +53,20 @@ label {
   margin-left: 1rem;
   text-align: center;
 }
+
 #Movie-list option {
   align-items: center;
 }
+
 .shows {
   display: flex;
   list-style: none;
-  background-color: rgba(25, 25, 25, 0.2);
+  background-color: rgba(165, 73, 153, 0.2);
   padding: 0.2rem 2rem;
   border-radius: 2rem;
   font-weight: 700;
 }
+
 .shows li {
   display: flex;
   align-items: center;
@@ -65,15 +74,19 @@ label {
   justify-content: center;
   padding: 0.5rem;
 }
+
 .shows li small {
   margin-left: -0.5;
 }
+
 .seats.selected {
   background-color: greenyellow;
 }
+
 .seats.booked {
   background-color: red;
 }
+
 .seats {
   height: 1.2rem;
   width: 1.5rem;
@@ -84,11 +97,13 @@ label {
   color: black;
   text-align: center;
 }
+
 .seat-row {
   display: flex;
   width: 100%;
   justify-content: center;
 }
+
 .display-screen {
   perspective: 1000px;
   margin: -1rem;
@@ -98,23 +113,27 @@ label {
   align-items: center;
   text-align: center;
 }
+
 .screen {
   background-color: whitesmoke;
   height: 8rem;
   transform: rotateX(-50deg);
   box-shadow: 0 3px 10px (rgba(255, 255, 255, 0.7));
-  width: 30%;
+  width: 400px;
 }
+
 .seats-container {
   width: 100%;
   display: flex;
   justify-content: center;
 }
+
 .price-seat {
   display: flex;
   flex-direction: column;
   position: relative;
 }
+
 .selectSeat {
   list-style: none;
   position: absolute;
@@ -122,30 +141,36 @@ label {
   bottom: 0;
   right: -35px;
   left: -40px;
+  border-radius: 5px;
 }
+
 .price-row {
-  background-color:darkmagenta;
+  background-color: rgb(216, 117, 216);
   color: #ffffff;
   width: 100%;
   height: 29%;
   padding: 1rem 0.5rem;
   font-size: 2rem;
+  border-radius: 5px 5px 0 0;
 }
+
 .price-row1 {
-  background-color:darkred;
+  background-color: rgb(202, 91, 91);
   color: #ffffff;
   width: 100%;
   height: 42.5%;
   padding: 1.6rem 0.5rem;
   font-size: 2rem;
 }
+
 .price-row2 {
-  background-color:darkslategray;
+  background-color: darkslategray;
   color: #ffffff;
   width: 100%;
   height: 28%;
   padding: 1rem 0.5rem;
   font-size: 2rem;
+  border-radius: 0 0 5px 5px;
 }
 
 .select-seat {
@@ -154,20 +179,25 @@ label {
   z-index: 2;
   right: -40px;
 }
+
 .seats-container {
   display: flex;
   justify-content: center;
 }
+
 .seats:nth-of-type(3) {
   margin-left: 1.5rem;
 }
+
 .seats:nth-last-of-type(2) {
   margin-left: 1.5rem;
 }
+
 .seats:not(.booked):hover {
   cursor: pointer;
   transform: scale(1.2);
 }
+
 .shows .seats:not(.booked):hover {
   cursor: default;
   transform: scale(1);
@@ -177,9 +207,9 @@ label {
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
-  color:midnightblue;
+  color: rgb(182, 182, 233);
 }
 
 .message span {
-  color: blueviolet;
+  color: rgb(157, 79, 235);
 }
